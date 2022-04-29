@@ -1,0 +1,1 @@
+[php7:error] [pid 26453] [client 192.168.178.68:49852] PHP Fatal error:  Unknown: Failed opening required '/var/www/html/malicious.php' (include_path='.:/usr/share/php') in Unknown on line 0
