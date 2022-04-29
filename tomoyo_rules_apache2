@@ -1,0 +1,180 @@
+<kernel> /usr/sbin/init /usr/sbin/apachectl /usr/sbin/apache2
+use_profile 1
+use_group 0
+
+misc env APACHE_RUN_DIR
+misc env APACHE_PID_FILE
+misc env SERVICE_RESULT
+misc env JOURNAL_STREAM
+misc env PATH
+misc env INVOCATION_ID
+misc env APACHE_STARTED_BY_SYSTEMD
+misc env APACHE_LOCK_DIR
+misc env LANG
+misc env APACHE_RUN_USER
+misc env APACHE_RUN_GROUP
+misc env MAINPID
+misc env APACHE_LOG_DIR
+misc env PWD
+file read /dev/urandom
+network unix stream connect /var/run/nscd/socket
+file read /etc/gai.conf
+network inet dgram send :: 0
+network inet dgram send 0.0.0.0 0
+file read /etc/apache2/apache2.conf
+file read /etc/apache2/mods-available/access_compat.load
+file read /usr/lib/apache2/modules/mod_access_compat.so
+file read /etc/apache2/mods-available/alias.load
+file read /usr/lib/apache2/modules/mod_alias.so
+file read /etc/apache2/mods-available/auth_basic.load
+file read /usr/lib/apache2/modules/mod_auth_basic.so
+file read /etc/apache2/mods-available/authn_core.load
+file read /usr/lib/apache2/modules/mod_authn_core.so
+file read /etc/apache2/mods-available/authn_file.load
+file read /usr/lib/apache2/modules/mod_authn_file.so
+file read /etc/apache2/mods-available/authz_core.load
+file read /usr/lib/apache2/modules/mod_authz_core.so
+file read /etc/apache2/mods-available/authz_host.load
+file read /usr/lib/apache2/modules/mod_authz_host.so
+file read /etc/apache2/mods-available/authz_user.load
+file read /usr/lib/apache2/modules/mod_authz_user.so
+file read /etc/apache2/mods-available/autoindex.load
+file read /usr/lib/apache2/modules/mod_autoindex.so
+file read /etc/apache2/mods-available/deflate.load
+file read /usr/lib/apache2/modules/mod_deflate.so
+file read /etc/apache2/mods-available/dir.load
+file read /usr/lib/apache2/modules/mod_dir.so
+file read /etc/apache2/mods-available/env.load
+file read /usr/lib/apache2/modules/mod_env.so
+file read /etc/apache2/mods-available/filter.load
+file read /usr/lib/apache2/modules/mod_filter.so
+file read /etc/apache2/mods-available/mime.load
+file read /usr/lib/apache2/modules/mod_mime.so
+file read /etc/apache2/mods-available/mpm_prefork.load
+file read /usr/lib/apache2/modules/mod_mpm_prefork.so
+file read /etc/apache2/mods-available/negotiation.load
+file read /usr/lib/apache2/modules/mod_negotiation.so
+file read /etc/apache2/mods-available/reqtimeout.load
+file read /usr/lib/apache2/modules/mod_reqtimeout.so
+file read /etc/apache2/mods-available/rewrite.load
+file read /usr/lib/apache2/modules/mod_rewrite.so
+file read /etc/apache2/mods-available/setenvif.load
+file read /usr/lib/apache2/modules/mod_setenvif.so
+file read /etc/apache2/mods-available/ssl.load
+file read /usr/lib/apache2/modules/mod_ssl.so
+file read /etc/apache2/mods-available/status.load
+file read /usr/lib/apache2/modules/mod_status.so
+file read /etc/apache2/mods-available/alias.conf
+file read /etc/apache2/mods-available/autoindex.conf
+file read /etc/apache2/mods-available/deflate.conf
+file read /etc/apache2/mods-available/dir.conf
+file read /etc/apache2/mods-available/mime.conf
+file read /etc/apache2/mods-available/mpm_prefork.conf
+file read /etc/apache2/mods-available/negotiation.conf
+file read /etc/apache2/mods-available/reqtimeout.conf
+file read /etc/apache2/mods-available/setenvif.conf
+file read /etc/apache2/mods-available/status.conf
+file read /etc/apache2/ports.conf
+file read /etc/apache2/conf-available/charset.conf
+file read /etc/apache2/conf-available/localized-error-pages.conf
+file read /etc/apache2/conf-available/other-vhosts-access-log.conf
+file read /etc/apache2/conf-available/security.conf
+file read /etc/apache2/conf-available/serve-cgi-bin.conf
+file read /etc/apache2/sites-available/000-default.conf
+file read /etc/apache2/sites-available/vhosts.conf
+file read /etc/ssl/openssl.cnf
+file read /etc/nsswitch.conf
+file read /etc/passwd
+file read /etc/group
+network inet dgram send :: 8080
+network inet dgram send 0.0.0.0 8080
+network inet dgram send :: 443
+network inet dgram send 0.0.0.0 443
+network inet dgram send :: 80
+network inet dgram send 0.0.0.0 80
+file read /etc/host.conf
+file read /run/systemd/resolve/stub-resolv.conf
+file read /etc/hosts
+file read/write/unlink/truncate /run/apache2/apache2.pid
+network inet stream bind/listen :: 8080
+network inet stream bind/listen :: 443
+file append /var/log/apache2/error.log
+file append /var/log/apache2/other_vhosts_access.log
+file append /var/log/apache2/access.log
+file read /etc/mime.types
+file read/write /dev/null
+file create /run/apache2/apache2.pid 0644
+file read proc:/sys/kernel/ngroups_max
+network unix stream connect /run/systemd/userdb/io.systemd.DynamicUser
+file read proc:/sys/kernel/random/boot_id
+file read /var/www/html/index-include-shell_exec.php
+file read /usr/share/apache2/icons/ubuntu-logo.png
+file read /var/www/html/footer.php
+file create /var/log/apache2/error.log 0666
+file create /var/log/apache2/other_vhosts_access.log 0666
+file create /var/log/apache2/access.log 0666
+file chmod /tmp/.ZendSem.\* 0666
+file create /tmp/.ZendSem.\* 0600
+file read /etc/apache2/mods-available/php\*.conf
+file read /etc/apache2/mods-available/php\*.load
+file read/write/unlink /tmp/.ZendSem.\*
+file read /usr/lib/apache2/modules/libphp\*.so
+file read /etc/php/\*/apache2/php.ini
+file read /etc/php/\*/apache2/conf.d/10-opcache.ini
+file read /etc/php/\*/mods-available/pdo.ini
+file read /etc/php/\*/mods-available/xml.ini
+file read /etc/php/\*/apache2/conf.d/20-apcu.ini
+file read /etc/php/\*/mods-available/calendar.ini
+file read /etc/php/\*/mods-available/ctype.ini
+file read /etc/php/\*/mods-available/dom.ini
+file read /etc/php/\*/mods-available/exif.ini
+file read /etc/php/\*/mods-available/ffi.ini
+file read /etc/php/\*/mods-available/fileinfo.ini
+file read /etc/php/\*/mods-available/ftp.ini
+file read /etc/php/\*/mods-available/gd.ini
+file read /etc/php/\*/mods-available/gettext.ini
+file read /etc/php/\*/mods-available/iconv.ini
+file read /etc/php/\*/mods-available/json.ini
+file read /etc/php/\*/mods-available/mbstring.ini
+file read /etc/php/\*/mods-available/phar.ini
+file read /etc/php/\*/mods-available/posix.ini
+file read /etc/php/\*/mods-available/readline.ini
+file read /etc/php/\*/mods-available/shmop.ini
+file read /etc/php/\*/mods-available/simplexml.ini
+file read /etc/php/\*/mods-available/sockets.ini
+file read /etc/php/\*/mods-available/sysvmsg.ini
+file read /etc/php/\*/mods-available/sysvsem.ini
+file read /etc/php/\*/mods-available/sysvshm.ini
+file read /etc/php/\*/mods-available/tokenizer.ini
+file read /etc/php/\*/mods-available/xmlreader.ini
+file read /etc/php/\*/mods-available/xmlwriter.ini
+file read /etc/php/\*/mods-available/xsl.ini
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/opcache.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/pdo.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/xml.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/calendar.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/ctype.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/dom.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/exif.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/ffi.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/fileinfo.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/ftp.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/gd.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/gettext.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/iconv.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/json.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/mbstring.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/phar.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/posix.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/readline.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/shmop.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/simplexml.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/sockets.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/sysvmsg.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/sysvsem.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/sysvshm.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/tokenizer.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/xmlreader.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/xmlwriter.so
+file read /usr/lib/php/\+\+\+\+\+\+\+\+/xsl.so
+network unix dgram send \*
