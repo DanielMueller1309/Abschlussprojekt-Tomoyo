@@ -1,0 +1,6 @@
+#YYYY/MM/DD HH:MM:SS# profile=3 mode=enforcing granted=no (global-pid=24874) task={ pid=24874 ppid=16964 uid=33 gid=33 euid=33 egid=33 suid=33 sgid=33 fsuid=33 fsgid=33 } path1={ uid=0 gid=0 ino=1591 major=8 minor=1 perm=0755 type=fil
+e } path1.parent={ uid=0 gid=0 ino=1568 perm=0755 } exec={ realpath="/usr/bin/dash" argc=3 envc=11 argv[]={ "sh" "-c" "cat\040/etc/secrets/geheim.txt" } envp[]={ "APACHE_RUN_DIR=/var/run/apache2" "APACHE_PID_FILE=/var/run/apache2/apac
+he2.pid" "JOURNAL_STREAM=9:66813" "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" "INVOCATION_ID=ba81c2ec62c54ef79a0dce596e47b9f0" "APACHE_LOCK_DIR=/var/lock/apache2" "LANG=C" "APACHE_RUN_USER=www-data" "
+APACHE_RUN_GROUP=www-data" "APACHE_LOG_DIR=/var/log/apache2" "PWD=/" } }
+<kernel> /usr/sbin/init /usr/sbin/apachectl /usr/sbin/apache2
+file execute /usr/bin/sh
