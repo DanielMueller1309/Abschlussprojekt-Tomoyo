@@ -1,0 +1,4 @@
+#YYYY/MM/DD HH:MM:SS# profile=3 mode=enforcing granted=no (global-pid=16698) task={ pid=16698 ppid=16688 uid=33 gid=33 euid=33 egid=33 suid=33 sgid=33 fsuid=33 fsgid=33 } path1={ uid=0 gid=0 ino=264474 major=8 minor=1 perm=0644 type=f
+ile } path1.parent={ uid=0 gid=0 ino=265179 perm=0755 }
+<kernel> /usr/sbin/init /usr/sbin/apachectl /usr/sbin/apache2
+file read /var/www/html/malicious.php
